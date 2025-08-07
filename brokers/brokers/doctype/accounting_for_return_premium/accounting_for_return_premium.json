@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-28 20:30:41.173431",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "transaction_type",
+  "depends",
+  "effect",
+  "column_break_4",
+  "account",
+  "rate",
+  "amount",
+  "supplier",
+  "deferral_section",
+  "start_date",
+  "column_break_9",
+  "end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Transaction Type",
+   "options": "Gross Premium\nDeferred Commission\nVAT(Broker)\nNAICOM Levy\nNet Premium",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "depends",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Line Charge",
+   "options": "Actual\nGross Premium\nDeferred Commission",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "effect",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Effect (DR/CR)",
+   "options": "Debit\nCredit",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "non_negative": 1,
+   "options": "Company:company:default_currency\n",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.transaction_type == \"Net Premium\"",
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "mandatory_depends_on": "eval: doc.transaction_type == \"Net Premium\"",
+   "options": "Supplier"
+  },
+  {
+   "depends_on": "eval: doc.transaction_type == \"Deferred Commission\"",
+   "fieldname": "deferral_section",
+   "fieldtype": "Section Break",
+   "label": "Deferral"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "mandatory_depends_on": "eval: doc.transaction_type == \"Deferred Commission\""
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "mandatory_depends_on": "eval: doc.transaction_type == \"Deferred Commission\""
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-07 06:27:29.943392",
+ "modified_by": "Administrator",
+ "module": "brokers",
+ "name": "Accounting for Return Premium",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

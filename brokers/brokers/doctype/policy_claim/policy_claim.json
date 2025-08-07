@@ -1,0 +1,530 @@
+{
+ "actions": [
+  {
+   "action": "/create_claim",
+   "action_type": "Route",
+   "custom": 1,
+   "group": "Claim",
+   "label": "Create"
+  }
+ ],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-10-17 14:10:30.848593",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "policy_detail_section",
+  "naming_series",
+  "last_debit_note",
+  "debit_note_date",
+  "client_name",
+  "column_break_6",
+  "policy_holder_name",
+  "policy_no",
+  "policy_name",
+  "name_of_insurer",
+  "column_break_11",
+  "insurer_policy_no",
+  "endorsement_no",
+  "start_date",
+  "end_date",
+  "column_break_15",
+  "policy_class",
+  "policy_status",
+  "account_manager",
+  "is_coinsured",
+  "claim_count",
+  "policy_owner",
+  "detail_of_loss_tab",
+  "section_break_26",
+  "date_of_loss",
+  "column_break_26",
+  "date_notified",
+  "column_break_27",
+  "claim_amount",
+  "column_break_30",
+  "select",
+  "section_break_31",
+  "description_of_loss",
+  "enter_co_insurance_detail_section",
+  "co_insurance_for_claim",
+  "financials_tab",
+  "financial_information_section",
+  "sum_insured",
+  "sum_insured_in_fc",
+  "column_break_38",
+  "gross_premium",
+  "gross_premium_in_fc",
+  "column_break_41",
+  "commission_amount",
+  "commission_amount_in_fc",
+  "column_break_25",
+  "net_premium",
+  "net_premium_in_fc",
+  "column_break_47",
+  "self_broker_proportion",
+  "currency",
+  "contact_detail_tab",
+  "contact_detail_section",
+  "contact_name",
+  "contact_email",
+  "column_break_33",
+  "contact_phone",
+  "policy_approver",
+  "policy_invoice_detail_section",
+  "policy_invoice_detail",
+  "policy_payment_history_section",
+  "payment_history",
+  "policy_variant",
+  "other_inform_tab",
+  "other_information_section",
+  "purchase_price",
+  "date",
+  "claim_question_section",
+  "claim_questionnaire",
+  "note",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Title",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "policy_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Policy Detail"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series"
+  },
+  {
+   "fieldname": "last_debit_note",
+   "fieldtype": "Link",
+   "label": "Last Debit Note",
+   "options": "Sales Invoice"
+  },
+  {
+   "fetch_from": "last_debit_note.posting_date",
+   "fieldname": "debit_note_date",
+   "fieldtype": "Date",
+   "label": "Debit Note Date"
+  },
+  {
+   "fetch_from": "last_debit_note.customer_name",
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "label": "Client Name"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "last_debit_note.policy_holders_name",
+   "fieldname": "policy_holder_name",
+   "fieldtype": "Data",
+   "label": "Policy Holder Name"
+  },
+  {
+   "fetch_from": "last_debit_note.existing_policy_no",
+   "fieldname": "policy_no",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Inurer Policy No"
+  },
+  {
+   "fieldname": "policy_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Policy Name"
+  },
+  {
+   "fetch_from": "last_debit_note.insurer_name_c",
+   "fieldname": "name_of_insurer",
+   "fieldtype": "Data",
+   "label": "Name of Insurer"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "last_debit_note.existing_policy_no",
+   "fieldname": "insurer_policy_no",
+   "fieldtype": "Data",
+   "label": "Insurer Policy No"
+  },
+  {
+   "fieldname": "endorsement_no",
+   "fieldtype": "Data",
+   "label": "Endorsement No"
+  },
+  {
+   "fetch_from": "last_debit_note.start_date",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fetch_from": "last_debit_note.end_date",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "last_debit_note.policy_description",
+   "fieldname": "policy_class",
+   "fieldtype": "Data",
+   "label": "Class of Insurance"
+  },
+  {
+   "fieldname": "policy_status",
+   "fieldtype": "Select",
+   "label": "Policy Status",
+   "options": "Active\nExpired\nSuspended Cancelled"
+  },
+  {
+   "fetch_from": "last_debit_note.account_manager",
+   "fieldname": "account_manager",
+   "fieldtype": "Data",
+   "label": "Account Manager"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_coinsured",
+   "fieldtype": "Check",
+   "label": "Is CoInsured"
+  },
+  {
+   "fieldname": "claim_count",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Claim Count"
+  },
+  {
+   "fieldname": "policy_owner",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Policy Owner",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "detail_of_loss_tab",
+   "fieldtype": "Tab Break",
+   "label": "Detail of Loss"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_loss",
+   "fieldtype": "Date",
+   "label": "Date of Loss"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_notified",
+   "fieldtype": "Date",
+   "label": "Date Notified"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "claim_amount",
+   "fieldtype": "Date",
+   "label": "Claim Amount"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "select",
+   "fieldtype": "Select",
+   "label": "Settlement Status",
+   "options": "\nClaim Paid\nClaim Outstanding\nUnconcluded"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description_of_loss",
+   "fieldtype": "Text Editor",
+   "label": "Description of Loss"
+  },
+  {
+   "fieldname": "enter_co_insurance_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Enter Co Insurance Detail"
+  },
+  {
+   "fieldname": "co_insurance_for_claim",
+   "fieldtype": "Table",
+   "label": "Table for Co Insurance",
+   "options": "Coinsurance Table for Policy Claim"
+  },
+  {
+   "fieldname": "financials_tab",
+   "fieldtype": "Tab Break",
+   "label": "Financials"
+  },
+  {
+   "fieldname": "financial_information_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Information"
+  },
+  {
+   "depends_on": "eval:doc.currency == 'NGN'",
+   "fetch_from": "last_debit_note.sum_assured",
+   "fieldname": "sum_insured",
+   "fieldtype": "Currency",
+   "label": "Sum Insured"
+  },
+  {
+   "depends_on": "eval:doc.currency != 'NGN'",
+   "fetch_from": "last_debit_note.gross_premium_in_tc",
+   "fieldname": "sum_insured_in_fc",
+   "fieldtype": "Currency",
+   "label": "Sum Insured In FC"
+  },
+  {
+   "fieldname": "column_break_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.currency == 'NGN'",
+   "fetch_from": "last_debit_note.gross_premium",
+   "fieldname": "gross_premium",
+   "fieldtype": "Currency",
+   "label": "Gross Premium"
+  },
+  {
+   "depends_on": "eval:doc.currency != 'NGN'",
+   "fetch_from": "last_debit_note.gross_premium_in_tc",
+   "fieldname": "gross_premium_in_fc",
+   "fieldtype": "Currency",
+   "label": "Gross Premium In FC"
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.currency == 'NGN'",
+   "fetch_from": "last_debit_note.commission_amount",
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount"
+  },
+  {
+   "depends_on": "eval:doc.currency != 'NGN'",
+   "fetch_from": "last_debit_note.commission_amount_in_tc",
+   "fieldname": "commission_amount_in_fc",
+   "fieldtype": "Currency",
+   "label": "Commission Amount In FC"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.currency == 'NGN'",
+   "fetch_from": "last_debit_note.net_premium",
+   "fieldname": "net_premium",
+   "fieldtype": "Currency",
+   "label": "Net Premium"
+  },
+  {
+   "depends_on": "eval:doc.currency != 'NGN'",
+   "fetch_from": "last_debit_note.net_premium_in_tc",
+   "fieldname": "net_premium_in_fc",
+   "fieldtype": "Currency",
+   "label": "Net Premium In FC"
+  },
+  {
+   "fieldname": "column_break_47",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "last_debit_note.commission",
+   "fieldname": "self_broker_proportion",
+   "fieldtype": "Percent",
+   "label": "Self Broker Proportion",
+   "precision": "2"
+  },
+  {
+   "fetch_from": "last_debit_note.currency",
+   "fieldname": "currency",
+   "fieldtype": "Currency",
+   "label": "Currency"
+  },
+  {
+   "fieldname": "contact_detail_tab",
+   "fieldtype": "Tab Break",
+   "label": "Contact Detail"
+  },
+  {
+   "fieldname": "contact_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Detail"
+  },
+  {
+   "fetch_from": "last_debit_note.contact_display",
+   "fieldname": "contact_name",
+   "fieldtype": "Data",
+   "label": "Contact Name"
+  },
+  {
+   "fetch_from": "last_debit_note.contact_email",
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "last_debit_note.contact_mobile",
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "policy_approver",
+   "fieldtype": "Link",
+   "label": "Policy Approver",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "policy_invoice_detail_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Policy Invoice Detail"
+  },
+  {
+   "fieldname": "policy_invoice_detail",
+   "fieldtype": "Table",
+   "options": "Policy Invoice History"
+  },
+  {
+   "fieldname": "policy_payment_history_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Policy Payment History"
+  },
+  {
+   "fieldname": "payment_history",
+   "fieldtype": "Table",
+   "options": "Policy Claim History"
+  },
+  {
+   "fieldname": "policy_variant",
+   "fieldtype": "Table",
+   "label": "Variant",
+   "options": "Policy Variant"
+  },
+  {
+   "fieldname": "other_inform_tab",
+   "fieldtype": "Tab Break",
+   "label": "Other Inform"
+  },
+  {
+   "fieldname": "other_information_section",
+   "fieldtype": "Section Break",
+   "label": "Other Information"
+  },
+  {
+   "fieldname": "purchase_price",
+   "fieldtype": "Currency",
+   "label": "Purchase Price",
+   "precision": "2"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "claim_question_section",
+   "fieldtype": "Section Break",
+   "label": "Claim Questionnaire"
+  },
+  {
+   "default": "Schedule of Deferred Commission",
+   "fieldname": "claim_questionnaire",
+   "fieldtype": "Table",
+   "options": "Claim Questionnaire"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Text Editor",
+   "label": "Detail of Policy"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Policy Claim",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-07 06:27:34.652226",
+ "modified_by": "Administrator",
+ "module": "brokers",
+ "name": "Policy Claim",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

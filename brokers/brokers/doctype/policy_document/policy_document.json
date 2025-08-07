@@ -1,0 +1,700 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:POL-DOC-{MM}-{YYYY}-{#####}",
+ "creation": "2023-09-02 02:23:42.838075",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "customer",
+  "column_break1",
+  "customer_name",
+  "date_of_issue",
+  "column_break_18",
+  "company",
+  "referenced_debit_note",
+  "last_renewal_date",
+  "address_detail",
+  "address_and_contact",
+  "customer_address",
+  "address_display",
+  "contact_person",
+  "contact_display",
+  "column_break_32",
+  "contact_mobile",
+  "contact_email",
+  "email_address",
+  "column_break2",
+  "company_address",
+  "company_address_display",
+  "currency_and_price_list",
+  "currency",
+  "conversion_rate",
+  "policy_information_tab",
+  "create_debit_note",
+  "other_details_section",
+  "insurance_class_group",
+  "col1",
+  "cover_type",
+  "column_break_82",
+  "account_manager",
+  "column_break_80",
+  "receipt_no",
+  "item_list_section",
+  "class_of_insurance_item",
+  "policy_details_section",
+  "policy_holders_name",
+  "insurer",
+  "insurer_name_c",
+  "existing_policy_no",
+  "column_break_87",
+  "start_date",
+  "end_date",
+  "days_remaining",
+  "commission",
+  "column_break_92",
+  "commission_amount",
+  "commission_amount_in_tc",
+  "sum_assured",
+  "sum_assured_in_tc",
+  "risk_type",
+  "column_break_99",
+  "tenure",
+  "policy_status",
+  "business_type",
+  "policy_description",
+  "is_co_insured",
+  "apply_co_brokers",
+  "co_brokers_applies_section",
+  "percent_due_to_main_broker",
+  "column_break_120",
+  "percent_due_to_other_brokers",
+  "column_break_122",
+  "deduct_admin_fee",
+  "colvbr",
+  "admin_fee_rate",
+  "section_break_121",
+  "admin_fee",
+  "colvn",
+  "comm_due_to_other_brokers_in_lc",
+  "colji",
+  "admin_fee_fc",
+  "column_break_124",
+  "comm_due_to_other_brokers_in_tc",
+  "other_policy_details_section",
+  "registration_number",
+  "vehicle_year",
+  "column_break_125",
+  "vehicle_colour",
+  "column_break_105",
+  "vehicle_type",
+  "monetary_detail_section",
+  "gross_premium",
+  "gross_premium_in_tc",
+  "column_break_111",
+  "vat_",
+  "vat_in_tc",
+  "column_break_114",
+  "naicom_levy",
+  "naicom_levy_in_tc",
+  "column_break_117",
+  "net_premium",
+  "net_premium_in_tc",
+  "co_broker_commission_section",
+  "broker_commission_analysis",
+  "grand_total",
+  "co_insurance_detail_section",
+  "co_insurance_details",
+  "terms_details_tab",
+  "terms_section_break",
+  "tc_name",
+  "terms",
+  "printing_settings_tab",
+  "edit_printing_settings",
+  "letter_head",
+  "select_print_heading",
+  "column_break_84",
+  "language",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fetch_if_empty": 1,
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "date_of_issue",
+   "fieldtype": "Date",
+   "label": "Date of Issue"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "referenced_debit_note",
+   "fieldtype": "Data",
+   "label": "Referenced Debit Note"
+  },
+  {
+   "fieldname": "last_renewal_date",
+   "fieldtype": "Date",
+   "label": "Last Renewal Date"
+  },
+  {
+   "fieldname": "address_detail",
+   "fieldtype": "Tab Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "address_and_contact",
+   "fieldtype": "Section Break",
+   "label": "Address and Contact"
+  },
+  {
+   "fieldname": "customer_address",
+   "fieldtype": "Data",
+   "label": "Customer Address"
+  },
+  {
+   "fieldname": "address_display",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "contact_display",
+   "fieldtype": "Small Text",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_mobile",
+   "fieldtype": "Small Text",
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "column_break2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_address",
+   "fieldtype": "Data",
+   "label": "Company Address Name"
+  },
+  {
+   "fieldname": "company_address_display",
+   "fieldtype": "Small Text",
+   "label": "Company Address"
+  },
+  {
+   "fieldname": "currency_and_price_list",
+   "fieldtype": "Section Break",
+   "label": "Currency and Price List"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "conversion_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate"
+  },
+  {
+   "fieldname": "policy_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Policy Information"
+  },
+  {
+   "default": "0",
+   "fieldname": "create_debit_note",
+   "fieldtype": "Check",
+   "label": "Create Debit Note",
+   "options": "0"
+  },
+  {
+   "fieldname": "other_details_section",
+   "fieldtype": "Section Break",
+   "label": "Information"
+  },
+  {
+   "fieldname": "insurance_class_group",
+   "fieldtype": "Select",
+   "label": "Insurance Class Group",
+   "options": "\nMotor Vehicle\nNon-Motor Vehicle\nGroup Life\nTravel Insurance"
+  },
+  {
+   "fieldname": "col1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cover_type",
+   "fieldtype": "Select",
+   "label": "Cover Type",
+   "options": "\nComprehensive\nThird-party"
+  },
+  {
+   "fieldname": "column_break_82",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_manager",
+   "fieldtype": "Data",
+   "label": "Account Manager"
+  },
+  {
+   "fieldname": "column_break_80",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "receipt_no",
+   "fieldtype": "Data",
+   "label": "Receipt No"
+  },
+  {
+   "fieldname": "item_list_section",
+   "fieldtype": "Section Break",
+   "label": "Select an Insurance Product"
+  },
+  {
+   "fieldname": "class_of_insurance_item",
+   "fieldtype": "Table",
+   "label": "Class of Insurance Item",
+   "options": "Policy Invoice Item"
+  },
+  {
+   "fieldname": "policy_details_section",
+   "fieldtype": "Section Break",
+   "label": "Policy Details"
+  },
+  {
+   "fieldname": "policy_holders_name",
+   "fieldtype": "Data",
+   "label": "Policy Holder's Name"
+  },
+  {
+   "fieldname": "insurer",
+   "fieldtype": "Link",
+   "label": "Insurer",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "insurer_name_c",
+   "fieldtype": "Data",
+   "label": "Insurer Name"
+  },
+  {
+   "fieldname": "existing_policy_no",
+   "fieldtype": "Data",
+   "label": " Policy No"
+  },
+  {
+   "fieldname": "column_break_87",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "days_remaining",
+   "fieldtype": "Int",
+   "label": "Days Remaining"
+  },
+  {
+   "fieldname": "commission",
+   "fieldtype": "Percent",
+   "label": "Commission Rate"
+  },
+  {
+   "fieldname": "column_break_92",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount"
+  },
+  {
+   "fieldname": "commission_amount_in_tc",
+   "fieldtype": "Currency",
+   "label": "Commission Amount"
+  },
+  {
+   "fieldname": "sum_assured",
+   "fieldtype": "Currency",
+   "label": "Sum Assured"
+  },
+  {
+   "fieldname": "sum_assured_in_tc",
+   "fieldtype": "Currency",
+   "label": "Sum Assured"
+  },
+  {
+   "fieldname": "risk_type",
+   "fieldtype": "Select",
+   "label": "Risk Type",
+   "options": "Add\nNew\nRNL\nInception"
+  },
+  {
+   "fieldname": "column_break_99",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tenure",
+   "fieldtype": "Int",
+   "label": "Tenure(in days)"
+  },
+  {
+   "fieldname": "policy_status",
+   "fieldtype": "Data",
+   "label": "Policy Status"
+  },
+  {
+   "fieldname": "business_type",
+   "fieldtype": "Select",
+   "label": "Business Type",
+   "options": "Local\nForeign"
+  },
+  {
+   "fieldname": "policy_description",
+   "fieldtype": "Data",
+   "label": "Policy Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_co_insured",
+   "fieldtype": "Check",
+   "label": "Is Co Insured"
+  },
+  {
+   "default": "0",
+   "fieldname": "apply_co_brokers",
+   "fieldtype": "Check",
+   "label": " Apply Co Brokers"
+  },
+  {
+   "fieldname": "co_brokers_applies_section",
+   "fieldtype": "Section Break",
+   "label": "Co Brokers Applies "
+  },
+  {
+   "fieldname": "percent_due_to_main_broker",
+   "fieldtype": "Percent",
+   "label": "% Due to Lead Broker"
+  },
+  {
+   "fieldname": "column_break_120",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "percent_due_to_other_brokers",
+   "fieldtype": "Percent",
+   "label": "% Due to Other Brokers"
+  },
+  {
+   "fieldname": "column_break_122",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "deduct_admin_fee",
+   "fieldtype": "Check",
+   "label": "Deduct Admin Fee"
+  },
+  {
+   "fieldname": "colvbr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "admin_fee_rate",
+   "fieldtype": "Percent",
+   "label": "Admin Fee Rate"
+  },
+  {
+   "fieldname": "section_break_121",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "admin_fee",
+   "fieldtype": "Currency",
+   "label": "Admin Fee"
+  },
+  {
+   "fieldname": "colvn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "comm_due_to_other_brokers_in_lc",
+   "fieldtype": "Currency",
+   "label": "Due to Other Brokers"
+  },
+  {
+   "fieldname": "colji",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "admin_fee_fc",
+   "fieldtype": "Currency",
+   "label": "Admin Fee"
+  },
+  {
+   "fieldname": "column_break_124",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "comm_due_to_other_brokers_in_tc",
+   "fieldtype": "Currency",
+   "label": "Due to Other Brokers"
+  },
+  {
+   "fieldname": "other_policy_details_section",
+   "fieldtype": "Section Break",
+   "label": "Other Policy Details"
+  },
+  {
+   "fieldname": "registration_number",
+   "fieldtype": "Data",
+   "label": "Registration Number"
+  },
+  {
+   "fieldname": "vehicle_year",
+   "fieldtype": "Data",
+   "label": "Vehicle Year"
+  },
+  {
+   "fieldname": "column_break_125",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_colour",
+   "fieldtype": "Data",
+   "label": "Vehicle Colour"
+  },
+  {
+   "fieldname": "column_break_105",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Small Text",
+   "label": "Vehicle Type"
+  },
+  {
+   "fieldname": "monetary_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Monetary Detail"
+  },
+  {
+   "fieldname": "gross_premium",
+   "fieldtype": "Currency",
+   "label": "Gross Premium"
+  },
+  {
+   "fieldname": "gross_premium_in_tc",
+   "fieldtype": "Currency",
+   "label": "Gross Premium"
+  },
+  {
+   "fieldname": "column_break_111",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vat_",
+   "fieldtype": "Currency",
+   "label": "VAT "
+  },
+  {
+   "fieldname": "vat_in_tc",
+   "fieldtype": "Currency",
+   "label": "VAT"
+  },
+  {
+   "fieldname": "column_break_114",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naicom_levy",
+   "fieldtype": "Currency",
+   "label": "NAICOM Levy"
+  },
+  {
+   "fieldname": "naicom_levy_in_tc",
+   "fieldtype": "Currency",
+   "label": "NAICOM Levy"
+  },
+  {
+   "fieldname": "column_break_117",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_premium",
+   "fieldtype": "Currency",
+   "label": "Net Premium"
+  },
+  {
+   "fieldname": "net_premium_in_tc",
+   "fieldtype": "Currency",
+   "label": "Net Premium"
+  },
+  {
+   "fieldname": "co_broker_commission_section",
+   "fieldtype": "Section Break",
+   "label": "Co Broker Commission"
+  },
+  {
+   "fieldname": "broker_commission_analysis",
+   "fieldtype": "Table",
+   "label": "Broker Commission Analysis",
+   "options": "Co Broker Detail"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total"
+  },
+  {
+   "fieldname": "co_insurance_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Co Insurance Detail"
+  },
+  {
+   "fieldname": "co_insurance_details",
+   "fieldtype": "Table",
+   "label": "Co Insurance Details",
+   "options": "Coinsurance for Policy Document"
+  },
+  {
+   "fieldname": "terms_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Terms Details"
+  },
+  {
+   "fieldname": "terms_section_break",
+   "fieldtype": "Section Break",
+   "label": "Terms and Conditions"
+  },
+  {
+   "fieldname": "tc_name",
+   "fieldtype": "Link",
+   "label": "Terms",
+   "options": "Co Broker Detail"
+  },
+  {
+   "fieldname": "terms",
+   "fieldtype": "Text Editor",
+   "label": "Terms and Conditions Details"
+  },
+  {
+   "fieldname": "printing_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Printing Settings"
+  },
+  {
+   "fieldname": "edit_printing_settings",
+   "fieldtype": "Section Break",
+   "label": "Printing Settings"
+  },
+  {
+   "fieldname": "letter_head",
+   "fieldtype": "Data",
+   "label": "Letter Head"
+  },
+  {
+   "fieldname": "select_print_heading",
+   "fieldtype": "Data",
+   "label": "Print Heading"
+  },
+  {
+   "fieldname": "column_break_84",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Data",
+   "label": "Print Language"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-07 06:27:28.957587",
+ "modified_by": "Administrator",
+ "module": "brokers",
+ "name": "Policy Document",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

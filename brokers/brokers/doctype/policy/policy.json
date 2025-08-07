@@ -1,0 +1,466 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-10-17 02:43:43.616555",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "policy_detail_section",
+  "naming_series",
+  "date_issued",
+  "client_name",
+  "insured_name",
+  "policy_holder_name",
+  "column_break_6",
+  "name_of_insurer",
+  "name_of_insurerla",
+  "policy_owner",
+  "policy_name",
+  "section_break_14",
+  "policy_class",
+  "class_of_insurance_description",
+  "insurer_policy_no",
+  "policy_no",
+  "endorsement_no",
+  "column_break_15",
+  "start_date",
+  "end_date",
+  "risk_type",
+  "column_break_23",
+  "business_type",
+  "policy_status",
+  "claim_count",
+  "policy_duration",
+  "financial_information_section",
+  "sum_insured",
+  "gross_premium",
+  "is_coinsured",
+  "column_break_25",
+  "commission_rate",
+  "vat_rate",
+  "naicom_levy_rate",
+  "column_break_27",
+  "commission_amount",
+  "vat_amount",
+  "naicom_levy",
+  "net_premium",
+  "co_insurance_section",
+  "detail",
+  "total_gross_premium",
+  "contact_detail_tab",
+  "contact_detail_section",
+  "contact_name",
+  "contact_email",
+  "column_break_33",
+  "contact_phone",
+  "policy_approver",
+  "policy_invoice_detail_tab",
+  "policy_invoice_detail_section",
+  "policy_invoice_detail",
+  "policy_claim_history_section",
+  "claim_history",
+  "policy_variant_information_section",
+  "policy_variant",
+  "purchase_price",
+  "picture",
+  "date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Title",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "policy_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Client Detail"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "\nC/PM/.YYYY./.MM./.#####\nC/CV/.YYYY./.MM./.#####\nC/MCY/.YYYY./.MM./.#####\nC/FSP/.YYYY./.MM./.#####\nC/BG/.YYYY./.MM./.#####\nC/HH/.YYYY./.MM./.#####\nC/MC/.YYYY./.MM./.#####\nC/MH/.YYYY./.MM./.#####\nC/AR/.YYYY./.MM./.#####\nC/GL/.YYYY./.MM./.#####\nC/GIT/.YYYY./.MM./.#####\nC/PA/.YYYY./.MM./.#####\nC/GPA/.YYYY./.MM./.#####\nC/CAR/.YYYY./.MM./.#####\nC/PAR/.YYYY./.MM./.#####\nC/PI/.YYYY./.MM./.#####\nC/PL/.YYYY./.MM./.#####\nC/PP/.YYYY./.MM./.#####\nC/BND/.YYYY./.MM./.#####\nC/TR/.YYYY./.MM./.#####"
+  },
+  {
+   "fieldname": "date_issued",
+   "fieldtype": "Date",
+   "label": "Date Issued"
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Link",
+   "label": "Insured",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "client_name.customer_name",
+   "fieldname": "insured_name",
+   "fieldtype": "Data",
+   "label": "Insured Name"
+  },
+  {
+   "fieldname": "policy_holder_name",
+   "fieldtype": "Data",
+   "label": "Policy Holder Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "supplier.supplier_name",
+   "fieldname": "name_of_insurer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Insurer",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "name_of_insurer.supplier_name",
+   "fieldname": "name_of_insurerla",
+   "fieldtype": "Data",
+   "label": "Name of Insurer"
+  },
+  {
+   "description": "Name of Account Manager",
+   "fieldname": "policy_owner",
+   "fieldtype": "Link",
+   "label": "Account Manager",
+   "options": "Sales Person"
+  },
+  {
+   "fieldname": "policy_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Policy Name"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "policy_class",
+   "fieldtype": "Link",
+   "label": "Class of Insurance",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "policy_class.item_name",
+   "fieldname": "class_of_insurance_description",
+   "fieldtype": "Data",
+   "label": "Class Description"
+  },
+  {
+   "fieldname": "insurer_policy_no",
+   "fieldtype": "Data",
+   "label": "Insurer Policy No"
+  },
+  {
+   "fieldname": "policy_no",
+   "fieldtype": "Data",
+   "label": "Policy No"
+  },
+  {
+   "fieldname": "endorsement_no",
+   "fieldtype": "Data",
+   "label": "Endorsement No"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "risk_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Risk Type",
+   "options": "\nRenewal\nNew",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "business_type",
+   "fieldtype": "Select",
+   "label": "Business Type",
+   "options": "\nLocal\nForeign"
+  },
+  {
+   "fieldname": "policy_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Policy Status",
+   "options": "\nActive\nExpired\nSuspended\nCancelled"
+  },
+  {
+   "fieldname": "claim_count",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Claim Count"
+  },
+  {
+   "bold": 1,
+   "fieldname": "policy_duration",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tenure",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "financial_information_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Information"
+  },
+  {
+   "fieldname": "sum_insured",
+   "fieldtype": "Currency",
+   "label": "Sum Insured"
+  },
+  {
+   "fieldname": "gross_premium",
+   "fieldtype": "Currency",
+   "label": "Gross Premium"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_coinsured",
+   "fieldtype": "Check",
+   "label": "Is CoInsured"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Percent",
+   "label": "Commission Rate",
+   "precision": "2"
+  },
+  {
+   "fieldname": "vat_rate",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "VAT Rate",
+   "precision": "2"
+  },
+  {
+   "fieldname": "naicom_levy_rate",
+   "fieldtype": "Percent",
+   "label": "NAICOM Levy Rate",
+   "precision": "2"
+  },
+  {
+   "bold": 1,
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount"
+  },
+  {
+   "fieldname": "vat_amount",
+   "fieldtype": "Currency",
+   "label": "VAT Amount"
+  },
+  {
+   "fieldname": "naicom_levy",
+   "fieldtype": "Currency",
+   "label": "NAICOM Levy"
+  },
+  {
+   "fieldname": "net_premium",
+   "fieldtype": "Currency",
+   "label": "Net Premium"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "depends_on": "is_coinsured",
+   "fieldname": "co_insurance_section",
+   "fieldtype": "Section Break",
+   "label": "Co Insurance"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "detail",
+   "fieldtype": "Table",
+   "label": "Detail",
+   "options": "Coinsurance"
+  },
+  {
+   "bold": 1,
+   "fieldname": "total_gross_premium",
+   "fieldtype": "Currency",
+   "label": "Gross Premium"
+  },
+  {
+   "fieldname": "contact_detail_tab",
+   "fieldtype": "Tab Break",
+   "label": "Contact Detail"
+  },
+  {
+   "fieldname": "contact_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Contact "
+  },
+  {
+   "fieldname": "contact_name",
+   "fieldtype": "Data",
+   "label": "Contact Name"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "policy_approver",
+   "fieldtype": "Link",
+   "label": "Policy Approver",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "policy_invoice_detail_tab",
+   "fieldtype": "Tab Break",
+   "label": "Policy Invoice Detail"
+  },
+  {
+   "fieldname": "policy_invoice_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Policy Invoice"
+  },
+  {
+   "fieldname": "policy_invoice_detail",
+   "fieldtype": "Table",
+   "options": "Policy Invoice History"
+  },
+  {
+   "fieldname": "policy_claim_history_section",
+   "fieldtype": "Section Break",
+   "label": "Policy Claim History"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "claim_history",
+   "fieldtype": "Table",
+   "options": "Policy Claim History"
+  },
+  {
+   "fieldname": "policy_variant_information_section",
+   "fieldtype": "Section Break",
+   "label": "Policy Variant Information"
+  },
+  {
+   "fieldname": "policy_variant",
+   "fieldtype": "Table",
+   "options": "Policy Variant"
+  },
+  {
+   "fieldname": "purchase_price",
+   "fieldtype": "Currency",
+   "label": "Purchase Price",
+   "precision": "2"
+  },
+  {
+   "default": "Picture",
+   "description": "Picture",
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "label": "Picture"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Policy",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "image_field": "picture",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-07 06:27:35.281520",
+ "modified_by": "Administrator",
+ "module": "brokers",
+ "name": "Policy",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "policy_name",
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "policy_name",
+ "track_changes": 1
+}

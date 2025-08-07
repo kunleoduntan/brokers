@@ -1,0 +1,189 @@
+{
+ "actions": [],
+ "creation": "2021-10-24 13:38:01.501089",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "accounts_section",
+  "gross_premium",
+  "np_account",
+  "dc_account",
+  "column_break_4",
+  "nl_expense",
+  "nl_account",
+  "vat_account",
+  "commission_income_account",
+  "levies_and_claims_section",
+  "value_added_tax_rate",
+  "naicom_levy_rate",
+  "other_settings_section",
+  "immediate_entry",
+  "active_policy",
+  "few_weeks_to_expiration",
+  "column_break_13",
+  "now_expired",
+  "send_expiration_notifications",
+  "raise_and_send_invoice_on_policy_expiration",
+  "when_to_send"
+ ],
+ "fields": [
+  {
+   "fieldname": "accounts_section",
+   "fieldtype": "Section Break",
+   "label": "Accounts"
+  },
+  {
+   "fieldname": "gross_premium",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gross Premium",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "np_account",
+   "fieldtype": "Link",
+   "label": "Net Premium Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dc_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Deferred Commission Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nl_expense",
+   "fieldtype": "Link",
+   "label": "NAICOM Levy Expense",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nl_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NAICOM Levy Payable",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vat_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "VAT(Broker)",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commission_income_account",
+   "fieldtype": "Link",
+   "label": "Commission Income Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "levies_and_claims_section",
+   "fieldtype": "Section Break",
+   "label": "Levies and Claims"
+  },
+  {
+   "fieldname": "value_added_tax_rate",
+   "fieldtype": "Percent",
+   "label": "Value Added Tax Rate",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "naicom_levy_rate",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "NAICOM Levy Rate",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "other_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Other Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "immediate_entry",
+   "fieldtype": "Check",
+   "label": "Post backdated entries immediately"
+  },
+  {
+   "fieldname": "active_policy",
+   "fieldtype": "Color",
+   "label": "Active Policy"
+  },
+  {
+   "fieldname": "few_weeks_to_expiration",
+   "fieldtype": "Color",
+   "label": "Few Weeks to Expiration"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "now_expired",
+   "fieldtype": "Color",
+   "label": "Now Expired"
+  },
+  {
+   "default": "0",
+   "fieldname": "send_expiration_notifications",
+   "fieldtype": "Check",
+   "label": "Send Expiration Notifications "
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "raise_and_send_invoice_on_policy_expiration",
+   "fieldtype": "Check",
+   "label": "Raise and Send Invoice on Policy Expiration"
+  },
+  {
+   "fieldname": "when_to_send",
+   "fieldtype": "Select",
+   "label": "When to Send",
+   "options": "2 - Weeks before\n2 - Days Before\nA - Week After\nA - Day After\nDo Not Send"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-08-07 06:27:35.817452",
+ "modified_by": "Administrator",
+ "module": "brokers",
+ "name": "Policy Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

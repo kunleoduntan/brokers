@@ -1,0 +1,615 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-26 07:20:27.761977",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "posting_date",
+  "ref_debit_note",
+  "insured_id",
+  "name_of_insured",
+  "column_break_4",
+  "currency",
+  "exchange_rate",
+  "business_type",
+  "risk_type",
+  "column_break_7",
+  "receipt_no",
+  "receipt_date",
+  "receipt_amount",
+  "column_break_13",
+  "reason_for_return",
+  "company",
+  "apply_co_brokers",
+  "debit_note_information_section",
+  "gross_premium",
+  "column_break_11",
+  "commission_amount",
+  "cu8",
+  "vat",
+  "column_break_15",
+  "naicom_levy",
+  "column_break_17",
+  "net_premium",
+  "vcol5",
+  "commission_rate",
+  "section_break_19",
+  "start_date",
+  "column_break_23",
+  "end_date",
+  "cvol9",
+  "name_of_insurer",
+  "column_break_35",
+  "percentage_due_to_other_brokers",
+  "insurer_code",
+  "return_policy_tab",
+  "return_premium_item_section",
+  "return_premium_item",
+  "section_break_42",
+  "calculate",
+  "column_break_44",
+  "total",
+  "column_break_46",
+  "total_in_fc",
+  "return_premium_credit_note_section",
+  "gross_premium_return",
+  "column_break_25",
+  "commission_amount_return",
+  "column_break_27",
+  "vat_return",
+  "column_break_29",
+  "naicom_levy_return",
+  "column_break_31",
+  "net_premium_return",
+  "section_break_29",
+  "gross_premium_return_in_fc",
+  "clo7",
+  "commission_amount_return_in_fc",
+  "vol8",
+  "vat_return_in_fc",
+  "column_break_59",
+  "naicom_levy_return_in_fc",
+  "column_break_61",
+  "net_premium_return_in_fc",
+  "bank_refunds_tab",
+  "money_refund_section",
+  "make_money_refund",
+  "amount_to_refund",
+  "amount_to_refund_in_fc",
+  "column_break_74",
+  "cheque_no",
+  "transaction_description",
+  "column_break_76",
+  "amount_in_words",
+  "bank_account_detail_section",
+  "bank_account",
+  "column_break_80",
+  "bank_gl",
+  "column_break_82",
+  "account_currency",
+  "accounting_tab",
+  "accounting_for_return_section",
+  "accounting_for_return_premium",
+  "income_tab",
+  "return_premium_entries_section",
+  "return_premium_accounting",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "ref_debit_note",
+   "fieldtype": "Link",
+   "label": "Ref Debit Note",
+   "options": "Sales Invoice"
+  },
+  {
+   "fetch_from": "ref_debit_note.customer",
+   "fieldname": "insured_id",
+   "fieldtype": "Data",
+   "label": "Insured ID",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fetch_from": "ref_debit_note.customer_name",
+   "fieldname": "name_of_insured",
+   "fieldtype": "Data",
+   "label": "Name of Insured",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "ref_debit_note.currency",
+   "fieldname": "currency",
+   "fieldtype": "Data",
+   "label": "Currency",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate"
+  },
+  {
+   "fetch_from": "ref_debit_note.business_type",
+   "fieldname": "business_type",
+   "fieldtype": "Data",
+   "label": "Business Type",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fetch_from": "ref_debit_note.risk_type",
+   "fieldname": "risk_type",
+   "fieldtype": "Data",
+   "label": "Risk Type",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "ref_debit_note.receipt_no",
+   "fieldname": "receipt_no",
+   "fieldtype": "Data",
+   "label": "Receipt No",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fieldname": "receipt_date",
+   "fieldtype": "Date",
+   "label": "Receipt Date"
+  },
+  {
+   "fieldname": "receipt_amount",
+   "fieldtype": "Currency",
+   "label": "Receipt Amount"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reason_for_return",
+   "fieldtype": "Small Text",
+   "label": "Reason For Return"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "default": "0",
+   "fieldname": "apply_co_brokers",
+   "fieldtype": "Check",
+   "label": " Apply Co Brokers"
+  },
+  {
+   "fieldname": "debit_note_information_section",
+   "fieldtype": "Section Break",
+   "label": "Debit Note Information ",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fetch_from": "ref_debit_note.gross_premium",
+   "fieldname": "gross_premium",
+   "fieldtype": "Currency",
+   "label": "Gross Premium",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "ref_debit_note.commission_amount",
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fieldname": "cu8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "ref_debit_note.vat_",
+   "fieldname": "vat",
+   "fieldtype": "Currency",
+   "label": "VAT",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "ref_debit_note.naicom_levy",
+   "fieldname": "naicom_levy",
+   "fieldtype": "Currency",
+   "label": "NAICOM Levy",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "ref_debit_note.net_premium",
+   "fieldname": "net_premium",
+   "fieldtype": "Currency",
+   "label": "Net Premium",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fieldname": "vcol5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "ref_debit_note.commission",
+   "fieldname": "commission_rate",
+   "fieldtype": "Percent",
+   "label": "Commission Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fetch_from": "ref_debit_note.start_date",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "ref_debit_note.end_date",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "cvol9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "ref_debit_note.insurer_name_c",
+   "fieldname": "name_of_insurer",
+   "fieldtype": "Data",
+   "label": "Name of Insurer",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "ref_debit_note.percent_due_to_other_brokers",
+   "fieldname": "percentage_due_to_other_brokers",
+   "fieldtype": "Percent",
+   "label": "& Due to Other Brokers",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fetch_from": "ref_debit_note.insurer",
+   "fieldname": "insurer_code",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_standard_filter": 1,
+   "label": "Insurer Code",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "return_policy_tab",
+   "fieldtype": "Tab Break",
+   "label": "Return Policy",
+   "show_dashboard": 1
+  },
+  {
+   "fieldname": "return_premium_item_section",
+   "fieldtype": "Section Break",
+   "label": "Return Premium Item"
+  },
+  {
+   "fieldname": "return_premium_item",
+   "fieldtype": "Table",
+   "label": "Return Premium Item",
+   "options": "Return Premium Item"
+  },
+  {
+   "fieldname": "section_break_42",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "calculate",
+   "fieldtype": "Button",
+   "label": "Calculate"
+  },
+  {
+   "fieldname": "column_break_44",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_46",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_in_fc",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "options": "currency"
+  },
+  {
+   "fieldname": "return_premium_credit_note_section",
+   "fieldtype": "Section Break",
+   "label": "Return Premium Credit Note"
+  },
+  {
+   "fieldname": "gross_premium_return",
+   "fieldtype": "Currency",
+   "label": "Gross Premium",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_amount_return",
+   "fieldtype": "Currency",
+   "label": "Commission Amount",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vat_return",
+   "fieldtype": "Currency",
+   "label": "VAT",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naicom_levy_return",
+   "fieldtype": "Currency",
+   "label": "NAICOM Levy",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_premium_return",
+   "fieldtype": "Currency",
+   "label": "Net Premium",
+   "read_only_depends_on": "ref_debit_note"
+  },
+  {
+   "fieldname": "section_break_29",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gross_premium_return_in_fc",
+   "fieldtype": "Currency",
+   "label": "Gross Premium",
+   "options": "currency"
+  },
+  {
+   "fieldname": "clo7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_amount_return_in_fc",
+   "fieldtype": "Currency",
+   "label": "Commission Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "vol8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vat_return_in_fc",
+   "fieldtype": "Currency",
+   "label": "VAT",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_59",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naicom_levy_return_in_fc",
+   "fieldtype": "Currency",
+   "label": "NAICOM Levy",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_61",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_premium_return_in_fc",
+   "fieldtype": "Currency",
+   "label": "Net Premium",
+   "options": "currency"
+  },
+  {
+   "fieldname": "bank_refunds_tab",
+   "fieldtype": "Tab Break",
+   "label": "Bank Refunds"
+  },
+  {
+   "fieldname": "money_refund_section",
+   "fieldtype": "Section Break",
+   "label": "Money Refund"
+  },
+  {
+   "default": "0",
+   "fieldname": "make_money_refund",
+   "fieldtype": "Check",
+   "label": "Make Money Refund"
+  },
+  {
+   "fieldname": "amount_to_refund",
+   "fieldtype": "Currency",
+   "label": "Amount to Refund"
+  },
+  {
+   "fieldname": "amount_to_refund_in_fc",
+   "fieldtype": "Currency",
+   "label": "Amount to Refund In Fc",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_74",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cheque_no",
+   "fieldtype": "Data",
+   "label": "Cheque No"
+  },
+  {
+   "fieldname": "transaction_description",
+   "fieldtype": "Small Text",
+   "label": "Transaction Description"
+  },
+  {
+   "fieldname": "column_break_76",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.make_money_refund == 1",
+   "fieldname": "amount_in_words",
+   "fieldtype": "Small Text",
+   "label": "Amount In Words"
+  },
+  {
+   "depends_on": "eval: doc.make_money_refund == 1",
+   "fieldname": "bank_account_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Bank Account Detail"
+  },
+  {
+   "fieldname": "bank_account",
+   "fieldtype": "Link",
+   "label": "Bank Account",
+   "options": "Bank Account"
+  },
+  {
+   "fieldname": "column_break_80",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "bank_account.account",
+   "fieldname": "bank_gl",
+   "fieldtype": "Data",
+   "label": "Bank GL"
+  },
+  {
+   "fieldname": "column_break_82",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_currency",
+   "fieldtype": "Data",
+   "label": "Account Currency"
+  },
+  {
+   "fieldname": "accounting_tab",
+   "fieldtype": "Tab Break",
+   "label": "Accounting"
+  },
+  {
+   "fieldname": "accounting_for_return_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting for Return"
+  },
+  {
+   "fieldname": "accounting_for_return_premium",
+   "fieldtype": "Table",
+   "label": "Accounting for Return Premium",
+   "options": "Accounting for Return Premium"
+  },
+  {
+   "fieldname": "income_tab",
+   "fieldtype": "Tab Break",
+   "label": "Income",
+   "show_dashboard": 1
+  },
+  {
+   "fieldname": "return_premium_entries_section",
+   "fieldtype": "Section Break",
+   "label": "Return Premium Entries"
+  },
+  {
+   "fieldname": "return_premium_accounting",
+   "fieldtype": "Table",
+   "label": "Return Premium Accounting",
+   "options": "Return Premium Entries"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Return Premium",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-07 06:27:30.533870",
+ "modified_by": "Administrator",
+ "module": "brokers",
+ "name": "Return Premium",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-10-17 02:18:59.541458",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "policy_detail",
+  "value",
+  "fulfilment",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "policy_detail",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Policy Detail",
+   "options": "Policy Description\nManufacturer\nYear of Manufacture\nRegistration No\nPurpose of Use\nProperty Value\nType of Insurance\nAddress and location\nIs Mortgaged\nNo of Apartments\nApartment Description\nProperty Insurance\nYear of Built\nColour\nOwner\nTitle"
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Value"
+  },
+  {
+   "default": "0",
+   "fieldname": "fulfilment",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fulfilment "
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-07 06:27:37.800895",
+ "modified_by": "Administrator",
+ "module": "brokers",
+ "name": "Policy Variant",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

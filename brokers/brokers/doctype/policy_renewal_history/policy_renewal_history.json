@@ -1,0 +1,181 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-03 20:52:41.682035",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "policy_renewal_section",
+  "name_of_insured",
+  "policy_holders_name",
+  "name_of_insurer",
+  "date_of_issue",
+  "column_break_4",
+  "policy",
+  "start_date",
+  "end_date",
+  "renewal_date",
+  "column_break_7",
+  "policy_no",
+  "class_of_insurance",
+  "tenure",
+  "referenced_debit_note",
+  "section_break_13",
+  "gross_premium",
+  "column_break_15",
+  "commission_rate",
+  "column_break_17",
+  "commission_amount",
+  "column_break_19",
+  "net_premium",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "policy_renewal_section",
+   "fieldtype": "Section Break",
+   "label": "Policy Renewal"
+  },
+  {
+   "fieldname": "name_of_insured",
+   "fieldtype": "Data",
+   "label": "Name of Insured"
+  },
+  {
+   "fieldname": "policy_holders_name",
+   "fieldtype": "Data",
+   "label": "Policy Holders Name"
+  },
+  {
+   "fieldname": "name_of_insurer",
+   "fieldtype": "Data",
+   "label": "Name of Insurer"
+  },
+  {
+   "fetch_from": "policy_no.date_of_issue",
+   "fieldname": "date_of_issue",
+   "fieldtype": "Date",
+   "label": "Date of Issue"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "policy",
+   "fieldtype": "Data",
+   "label": "Policy"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "renewal_date",
+   "fieldtype": "Date",
+   "label": "Renewal Date"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "policy_no",
+   "fieldtype": "Link",
+   "label": "Policy No",
+   "options": "Policy Document"
+  },
+  {
+   "fieldname": "class_of_insurance",
+   "fieldtype": "Small Text",
+   "label": "Class of Insurance"
+  },
+  {
+   "fieldname": "tenure",
+   "fieldtype": "Int",
+   "label": "Tenure"
+  },
+  {
+   "fieldname": "referenced_debit_note",
+   "fieldtype": "Data",
+   "label": "Referenced Debit Note"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gross_premium",
+   "fieldtype": "Float",
+   "label": "Gross Premium"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Float",
+   "label": "Commission Rate"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_amount",
+   "fieldtype": "Float",
+   "label": "Commission Amount"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_premium",
+   "fieldtype": "Float",
+   "label": "Net Premium"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Policy Renewal History",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-07 06:27:33.873807",
+ "modified_by": "Administrator",
+ "module": "brokers",
+ "name": "Policy Renewal History",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

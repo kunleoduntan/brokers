@@ -1,0 +1,220 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-10-20 07:51:33.665754",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "policy_renewal_section",
+  "insured_name",
+  "policy_holders_name",
+  "date_of_issue",
+  "account_manager",
+  "column_break_4",
+  "start_date",
+  "end_date",
+  "renewal_date",
+  "days_remaining",
+  "column_break_7",
+  "policy_no",
+  "class_of_insurance",
+  "tenure",
+  "referenced_debit_note",
+  "column_break_18",
+  "policy_description",
+  "contact_email",
+  "renewal_status",
+  "section_break_13",
+  "gross_premium",
+  "column_break_15",
+  "commission_rate",
+  "column_break_17",
+  "commission_amount",
+  "column_break_19",
+  "sum_assured",
+  "column_break_28",
+  "currency",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "policy_renewal_section",
+   "fieldtype": "Section Break",
+   "label": "Policy Renewal"
+  },
+  {
+   "fieldname": "insured_name",
+   "fieldtype": "Data",
+   "label": "Insured Name"
+  },
+  {
+   "fieldname": "policy_holders_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Policy Holders Name"
+  },
+  {
+   "fetch_from": "policy_no.date_of_issue",
+   "fieldname": "date_of_issue",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Issue"
+  },
+  {
+   "fieldname": "account_manager",
+   "fieldtype": "Data",
+   "label": "Account Manager"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date"
+  },
+  {
+   "fieldname": "renewal_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Renewal Date"
+  },
+  {
+   "fieldname": "days_remaining",
+   "fieldtype": "Data",
+   "label": "Days Remaining"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "policy_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Policy No",
+   "options": "Policy Document"
+  },
+  {
+   "fieldname": "class_of_insurance",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class of Insurance"
+  },
+  {
+   "fieldname": "tenure",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Tenure"
+  },
+  {
+   "fieldname": "referenced_debit_note",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Referenced Debit Note"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "policy_description",
+   "fieldtype": "Small Text",
+   "label": "Policy Description"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email"
+  },
+  {
+   "fieldname": "renewal_status",
+   "fieldtype": "Select",
+   "label": "Renewal Status",
+   "options": "\nNot Renewed"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break",
+   "label": "Monetary"
+  },
+  {
+   "fieldname": "gross_premium",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Gross Premium"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Commission Rate"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Commission Amount"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sum_assured",
+   "fieldtype": "Float",
+   "label": "Sum Assured",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Data",
+   "label": "Currency"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Unrenewed Policy",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-07 06:27:31.937584",
+ "modified_by": "Administrator",
+ "module": "brokers",
+ "name": "Unrenewed Policy",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

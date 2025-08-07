@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-20 07:49:36.077014",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "policy_renewal_section",
+  "date_of_issue",
+  "column_break_4",
+  "start_date",
+  "end_date",
+  "column_break_7",
+  "renewal_date",
+  "policy_not_renewed_section",
+  "policy_not_renewed",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "policy_renewal_section",
+   "fieldtype": "Section Break",
+   "label": "Policy Renewal"
+  },
+  {
+   "fetch_from": "policy_no.date_of_issue",
+   "fieldname": "date_of_issue",
+   "fieldtype": "Date",
+   "label": "Date of Issue"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "renewal_date",
+   "fieldtype": "Date",
+   "label": "Renewal Date"
+  },
+  {
+   "fieldname": "policy_not_renewed_section",
+   "fieldtype": "Section Break",
+   "label": "Policy Not Renewed"
+  },
+  {
+   "fieldname": "policy_not_renewed",
+   "fieldtype": "Table",
+   "label": "Policy Not Renewed ",
+   "options": "Unrenewed Policy"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Policy Report",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-07 06:27:32.741707",
+ "modified_by": "Administrator",
+ "module": "brokers",
+ "name": "Policy Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

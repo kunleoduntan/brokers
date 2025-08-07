@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-10-28 20:23:11.093389",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "class_of_insurance",
+  "description",
+  "qty",
+  "column_break_4",
+  "unit_price",
+  "amount",
+  "column_break_7",
+  "account_to_debit",
+  "account_to_credit",
+  "foreign_currency_section",
+  "unit_price_in_fc",
+  "amount_in_fc",
+  "column_break_13",
+  "currency",
+  "exchange_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "class_of_insurance",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Class of Insurance",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "class_of_insurance.item_name",
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Unit Price"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_to_debit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account To Debit",
+   "options": "Account"
+  },
+  {
+   "fieldname": "account_to_credit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account To Credit",
+   "options": "Account"
+  },
+  {
+   "fieldname": "foreign_currency_section",
+   "fieldtype": "Section Break",
+   "label": "Foreign Currency"
+  },
+  {
+   "fieldname": "unit_price_in_fc",
+   "fieldtype": "Currency",
+   "label": "Unit Price",
+   "options": "currency"
+  },
+  {
+   "fieldname": "amount_in_fc",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-07 06:27:33.333556",
+ "modified_by": "Administrator",
+ "module": "brokers",
+ "name": "Return Premium Item",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

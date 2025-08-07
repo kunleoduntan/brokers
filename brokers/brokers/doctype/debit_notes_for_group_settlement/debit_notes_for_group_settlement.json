@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-05-23 04:03:57.206026",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "debit_note",
+  "date",
+  "insured_code",
+  "column_break_4",
+  "name_of_insured",
+  "gross_premium",
+  "gross_premium_in_tc",
+  "column_break_8",
+  "policy_no",
+  "start_date",
+  "end_date",
+  "column_break_12",
+  "name_of_insurer",
+  "policy_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "debit_note",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Debit Note",
+   "options": "Sales Invoice"
+  },
+  {
+   "fetch_from": "debit_note.posting_date",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fetch_from": "debit_note.customer",
+   "fieldname": "insured_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Insured Code"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "debit_note.customer_name",
+   "fieldname": "name_of_insured",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Name of Insured"
+  },
+  {
+   "fetch_from": "debit_note.gross_premium",
+   "fieldname": "gross_premium",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Gross Premium"
+  },
+  {
+   "fetch_from": "debit_note.gross_premium_in_tc",
+   "fieldname": "gross_premium_in_tc",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Gross Premium In TC"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "debit_note.existing_policy_no",
+   "fieldname": "policy_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Policy No"
+  },
+  {
+   "fetch_from": "debit_note.start_date",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Start Date"
+  },
+  {
+   "fetch_from": "debit_note.end_date",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "debit_note.insurer_name_c",
+   "fieldname": "name_of_insurer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Name of Insurer"
+  },
+  {
+   "fetch_from": "debit_note.policy_description",
+   "fieldname": "policy_description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Policy Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-07 06:27:30.215694",
+ "modified_by": "Administrator",
+ "module": "brokers",
+ "name": "Debit Notes For Group Settlement",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
