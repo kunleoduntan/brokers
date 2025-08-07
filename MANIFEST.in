@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include brokers *.css
+recursive-include brokers *.csv
+recursive-include brokers *.html
+recursive-include brokers *.ico
+recursive-include brokers *.js
+recursive-include brokers *.json
+recursive-include brokers *.md
+recursive-include brokers *.png
+recursive-include brokers *.py
+recursive-include brokers *.svg
+recursive-include brokers *.txt
+recursive-exclude brokers *.pyc
